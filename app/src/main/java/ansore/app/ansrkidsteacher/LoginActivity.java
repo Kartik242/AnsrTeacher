@@ -28,7 +28,7 @@ public class LoginActivity extends AppCompatActivity {
     private TextInputEditText t_email,t_password;
     private String email, password;
 
-    private String URL = "http://ansrkids.in/login.php";
+    private String URL = "http://ansrkids.in/sign_in.php";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,17 +65,18 @@ public class LoginActivity extends AppCompatActivity {
                 @Override
                 public void onResponse(String response) {
                     if (response.equals("success")) {
+                        makeToast("success");
                         Intent intent = new Intent(LoginActivity.this, homeActivity.class);
                         startActivity(intent);
                         finish();
                     } else if (response.equals("failure")) {
-                        Toast.makeText(LoginActivity.this, "failure", Toast.LENGTH_LONG).show();
+                        makeToast("failure");
                     }
                 }
             }, new Response.ErrorListener() {
                 @Override
                 public void onErrorResponse(VolleyError error) {
-                    Toast.makeText(LoginActivity.this, error.toString().trim(), Toast.LENGTH_LONG).show();
+                    makeToast(error.toString().trim());
                 }
             }){
                 @Nullable
@@ -90,7 +91,11 @@ public class LoginActivity extends AppCompatActivity {
             RequestQueue requestQueue = Volley.newRequestQueue(getApplicationContext());
             requestQueue.add(stringRequest);
         }else{
-            Toast.makeText(LoginActivity.this, "Fields can not be empty.", Toast.LENGTH_LONG).show();
+            makeToast("Fields can not be empty.");
         }
+    }
+
+    private void makeToast(String string) {
+        Toast.makeText(LoginActivity.this, string, Toast.LENGTH_LONG).show();
     }
 }
