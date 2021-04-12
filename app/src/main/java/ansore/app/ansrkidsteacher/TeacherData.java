@@ -2,15 +2,15 @@ package ansore.app.ansrkidsteacher;
 
 public class TeacherData {
 
-    private String email, gender;
+    private String email, password;
 
     public TeacherData() {
 
     }
 
-    public TeacherData(String email, String gender) {
+    public TeacherData(String email, String password) {
         this.email = email;
-        this.gender = gender;
+        this.password = password;
     }
 
     public String getEmail() {
@@ -21,11 +21,11 @@ public class TeacherData {
         this.email = email;
     }
 
-    public String getGender() {
-        return gender;
+    public String getPassword() {
+        return password;
     }
 
-    public void setGender(String gender) {
-        this.gender = gender;
+    public void setPassword(String password) {
+        this.password = password;
     }
 }
