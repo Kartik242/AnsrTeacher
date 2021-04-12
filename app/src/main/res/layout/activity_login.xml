@@ -108,8 +108,14 @@
 
         </com.google.android.material.textfield.TextInputLayout>
 
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Keep Me Logged in"
+            android:id="@+id/checkbox"/>
+
         <Button
-            android:onClick="login_Funs"
+
             android:padding="20dp"
             android:textColor="@color/white"
             android:textStyle="bold|normal"

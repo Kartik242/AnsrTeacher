@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">AnsrTeacher</string>
+    <string name="preLoginStatus">loginstate</string>
 </resources>
