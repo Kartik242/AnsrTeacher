@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/back_blue"
+    tools:context=".LoginActivity">
+
+    <LinearLayout
+        android:padding="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:orientation="vertical"
+        android:gravity="right|bottom">
+
+        <ImageView
+            android:src="@drawable/img_kid"
+            android:layout_width="170dp"
+            android:layout_height="170dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:padding="20dp"
+        android:id="@+id/linear"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:orientation="vertical"
+        android:gravity="left|bottom">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:text="WELCOME!"
+            android:textColor="#fff"
+            android:textSize="25dp" />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:text="Teacher Log in here"
+            android:textColor="#fff"
+            android:textSize="15dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/linear"
+        android:gravity="center|top"
+        android:background="@drawable/white_background"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edit_text_page"
+            android:textColor="@color/black"
+            android:textColorHint="#696969">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/t_email"
+                android:singleLine="true"
+                android:inputType="textWebEmailAddress"
+                android:background="@drawable/edit_text_page"
+                android:textColor="@color/black"
+                android:textColorHint="#696969"
+                android:gravity="left"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="E-mail"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_marginTop="10dp"
+            android:background="@drawable/edit_text_page"
+            android:textColor="@color/black"
+            android:textColorHint="#696969"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/t_password"
+                android:gravity="left"
+                android:inputType="textPassword"
+                android:singleLine="true"
+                android:background="@drawable/edit_text_page"
+                android:textColor="@color/black"
+                android:textColorHint="#696969"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Password"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:onClick="login_Funs"
+            android:padding="20dp"
+            android:textColor="@color/white"
+            android:textStyle="bold|normal"
+            android:textSize="16dp"
+            android:id="@+id/login_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editTextClass"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="Login" />
+
+    </LinearLayout>
+
+</RelativeLayout>
